@@ -158,7 +158,7 @@ RCT_EXPORT_METHOD(setAutomaticAppleSearchAdsAttributionCollection:(BOOL)automati
 RCT_EXPORT_METHOD(enableAdServicesAttributionTokenCollection)
 {
     if (@available(iOS 14.3, macOS 11.1, macCatalyst 14.3, *)) {
-        [RCCommonFunctionality enableAdServicesAttributionTokenCollection];
+//        [RCCommonFunctionality enableAdServicesAttributionTokenCollection];
     } else {
         NSLog(@"[Purchases] Warning: tried to enable AdServices attribution token collection, but it's only available on iOS 14.3 or greater or macOS 11.1 or greater.");
     }
@@ -206,7 +206,7 @@ RCT_EXPORT_METHOD(presentCodeRedemptionSheet) {
     logUnavailablePresentCodeRedemptionSheet();
     #else
     if (@available(iOS 14.0, *)) {
-        [RCCommonFunctionality presentCodeRedemptionSheet];
+       // [RCCommonFunctionality presentCodeRedemptionSheet];
     } else {
         logUnavailablePresentCodeRedemptionSheet();
     }
